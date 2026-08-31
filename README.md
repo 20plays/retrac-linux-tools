@@ -9,10 +9,14 @@ This repository collects the findings, reproducible diagnostics, Wine compatibil
 ## Start here
 
 - [Current status and strongest findings](docs/current-status.md)
+- [Redacted diagnostic evidence](docs/evidence.md)
+- [Investigation timeline](docs/investigation-timeline.md)
 - [Wine patches and source history](docs/wine-patches.md)
 - [Investigation notes / ruled-out leads](docs/findings.md)
 - [Next steps](docs/next-steps.md)
+- [Native Windows reference test](docs/windows-reference.md)
 - [Reproduction and logging commands](docs/reproduction.md)
+- [Patch contribution notes](patches/README.md)
 - [Security / redaction rules](SECURITY.md)
 
 ## Known-good test environment
@@ -40,6 +44,17 @@ Paths in this repository are examples from that test environment. Change them to
 8. **Breakthrough:** AleaClient now signals ready; AleaService resumes the game and records `Launch succeeded`.
 9. The remaining protected wrapper reaches the Alea backend over WebSocket, but the backend stops sending application data after the final client messages.
 10. Packet capture confirms the timeout is real: Wine is not hiding queued socket data, and the remote peer does not close first.
+
+## Helper scripts
+
+The `scripts/` directory contains small helpers for:
+
+- starting the Alea service with a persistent wineserver,
+- launching Retrac,
+- capturing TCP timing/headers,
+- extracting the wrapper thread that reaches the fatal MessageBox from a relay trace.
+
+They intentionally avoid dumping or interpreting protected protocol payloads.
 
 ## Scope
 
