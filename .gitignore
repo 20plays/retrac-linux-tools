@@ -1,0 +1,22 @@
+# Local Wine build/package output
+*.pkg.tar.zst
+*.pkg.tar.xz
+
+# Traces and captures may contain credentials
+*.log
+*.pcap
+*.pcapng
+*.cap
+*relay*.txt
+*trace*.txt
+*diagnostic*.txt
+
+# Raw launcher / anti-cheat output
+logs/
+captures/
+private/
+
+# Editor noise
+.vscode/
+.idea/
+*.swp
