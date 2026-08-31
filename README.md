@@ -8,6 +8,8 @@ This repository collects the findings, reproducible diagnostics, Wine compatibil
 
 ## Start here
 
+- **[Clean-clone reproduction guide](REPRODUCE.md)** — canonical path for people and coding agents
+- **[Agent instructions](AGENTS.md)** — reproduction-first rules for Codex/Claude/other agents
 - [Current status and strongest findings](docs/current-status.md)
 - [Redacted diagnostic evidence](docs/evidence.md)
 - [Investigation timeline](docs/investigation-timeline.md)
@@ -47,10 +49,15 @@ Paths in this repository are examples from that test environment. Change them to
 
 ## Helper scripts
 
-The `scripts/` directory contains small helpers for:
+The `scripts/` directory contains helpers for:
 
+- building the pinned Wine Staging 11.16 package from a fresh clone,
+- verifying the resulting Wine source checkpoint,
+- creating a fresh Wine prefix and installing the pinned Retrac MSI,
+- registering the `retrac:` OAuth URI handler,
 - starting the Alea service with a persistent wineserver,
 - launching Retrac,
+- verifying the established end-to-end checkpoint without printing secrets,
 - capturing TCP timing/headers,
 - extracting the wrapper thread that reaches the fatal MessageBox from a relay trace.
 
