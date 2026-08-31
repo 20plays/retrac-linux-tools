@@ -1,5 +1,8 @@
 # Reproduction and Diagnostic Commands
 
+> **Canonical clean-clone reproduction:** start with [../REPRODUCE.md](../REPRODUCE.md).
+> This file is the lower-level diagnostic command reference used after the baseline is reproduced.
+
 These commands reflect the test setup used during the investigation. Adjust paths to your own prefix.
 
 ## Environment
