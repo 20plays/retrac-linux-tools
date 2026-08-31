@@ -112,7 +112,7 @@ def patch_ole(root: pathlib.Path) -> None:
         "    IDropTarget *drop_target;\n"
         "    DWORD pid = 0;\n"
         "    HRESULT hr;",
-        "DWORD pid = 0;",
+        "IDropTarget *drop_target;\\n    DWORD pid = 0;\\n    HRESULT hr;",
     )
     replace_once(
         root, "dlls/ole32/ole2.c",
