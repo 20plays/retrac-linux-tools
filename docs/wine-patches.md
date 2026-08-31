@@ -192,4 +192,6 @@ These diagnostics proved several earlier hypotheses wrong; see [findings.md](fin
 
 ## Important maintenance note
 
-The package remains named like a normal `wine-staging-11.16-1` build. A normal distro Wine upgrade can overwrite it. Keep the source branch/commits or export patches before upgrading.
+The canonical reproduction is now repository-owned rather than dependent on the original local Wine branch. See [../REPRODUCE.md](../REPRODUCE.md), `repro/versions.env`, and `scripts/apply-retrac-wine-11.16.py`.
+
+The package remains named like a normal `wine-staging-11.16-1` build, so a normal distro Wine upgrade can overwrite it. Rebuild/reinstall from the pinned repository procedure before comparing behavior.
